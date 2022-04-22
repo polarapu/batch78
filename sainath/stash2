@@ -1,0 +1,77 @@
+Advaith@DESKTOP-3NCKQQC MINGW64 /g/DEVOPS/Git_Repo/batch78/sainath (main)
+$ git stash pop
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   stash1
+
+Dropped refs/stash@{0} (7f7327626dffd0c655eea1387954cb4271c99f86)
+
+Advaith@DESKTOP-3NCKQQC MINGW64 /g/DEVOPS/Git_Repo/batch78/sainath (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   stash1
+
+
+Advaith@DESKTOP-3NCKQQC MINGW64 /g/DEVOPS/Git_Repo/batch78/sainath (main)
+$ git stash list
+stash@{0}: On main: stash1
+
+Advaith@DESKTOP-3NCKQQC MINGW64 /g/DEVOPS/Git_Repo/batch78/sainath (main)
+$ git stash apply
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   azure
+        new file:   stash1
+
+
+Advaith@DESKTOP-3NCKQQC MINGW64 /g/DEVOPS/Git_Repo/batch78/sainath (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   azure
+        new file:   stash1
+
+
+Advaith@DESKTOP-3NCKQQC MINGW64 /g/DEVOPS/Git_Repo/batch78/sainath (main)
+$ git stash list^C
+
+Advaith@DESKTOP-3NCKQQC MINGW64 /g/DEVOPS/Git_Repo/batch78/sainath (main)
+$
+
+Advaith@DESKTOP-3NCKQQC MINGW64 /g/DEVOPS/Git_Repo/batch78/sainath (main)
+$ git stash save "stash1"
+Saved working directory and index state On main: stash1
+
+Advaith@DESKTOP-3NCKQQC MINGW64 /g/DEVOPS/Git_Repo/batch78/sainath (main)
+$ git stash list
+stash@{0}: On main: stash1
+stash@{1}: On main: stash1
+
+Advaith@DESKTOP-3NCKQQC MINGW64 /g/DEVOPS/Git_Repo/batch78/sainath (main)
+$ git stash drop stash@{0}
+Dropped stash@{0} (f4517e4519661821a24692b45579ff1435757613)
+
+Advaith@DESKTOP-3NCKQQC MINGW64 /g/DEVOPS/Git_Repo/batch78/sainath (main)
+$ git stash drop stash@{0}
+Dropped stash@{0} (4fd5915ad6ad134eae7c23124d29ef60b517298c)
+
+Advaith@DESKTOP-3NCKQQC MINGW64 /g/DEVOPS/Git_Repo/batch78/sainath (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+

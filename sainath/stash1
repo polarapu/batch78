@@ -1,0 +1,75 @@
+Advaith@DESKTOP-3NCKQQC MINGW64 /g/DEVOPS/Git_Repo/batch78/sainath (main)
+$ git add .
+warning: LF will be replaced by CRLF in sainath/stash.
+The file will have its original line endings in your working directory
+
+Advaith@DESKTOP-3NCKQQC MINGW64 /g/DEVOPS/Git_Repo/batch78/sainath (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   stash
+
+
+Advaith@DESKTOP-3NCKQQC MINGW64 /g/DEVOPS/Git_Repo/batch78/sainath (main)
+$ git config --global core.autocrlf true
+
+Advaith@DESKTOP-3NCKQQC MINGW64 /g/DEVOPS/Git_Repo/batch78/sainath (main)
+$ git commit -m stash
+[main 921c96d] stash
+ 1 file changed, 813 insertions(+)
+ create mode 100644 sainath/stash
+
+Advaith@DESKTOP-3NCKQQC MINGW64 /g/DEVOPS/Git_Repo/batch78/sainath (main)
+$ gigit push
+bash: gigit: command not found
+
+Advaith@DESKTOP-3NCKQQC MINGW64 /g/DEVOPS/Git_Repo/batch78/sainath (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 5.89 KiB | 5.89 MiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/polarapu/batch78.git
+   419d823..921c96d  main -> main
+
+Advaith@DESKTOP-3NCKQQC MINGW64 /g/DEVOPS/Git_Repo/batch78/sainath (main)
+$ touch stash1
+
+Advaith@DESKTOP-3NCKQQC MINGW64 /g/DEVOPS/Git_Repo/batch78/sainath (main)
+$ git add .
+
+Advaith@DESKTOP-3NCKQQC MINGW64 /g/DEVOPS/Git_Repo/batch78/sainath (main)
+$ git stash save "stash1"
+Saved working directory and index state On main: stash1
+
+Advaith@DESKTOP-3NCKQQC MINGW64 /g/DEVOPS/Git_Repo/batch78/sainath (main)
+$ git stash list
+stash@{0}: On main: stash1
+stash@{1}: On main: stash1
+
+Advaith@DESKTOP-3NCKQQC MINGW64 /g/DEVOPS/Git_Repo/batch78/sainath (main)
+$ git stash show
+ sainath/stash1 | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+Advaith@DESKTOP-3NCKQQC MINGW64 /g/DEVOPS/Git_Repo/batch78/sainath (main)
+$ git stash show stash@{1}
+ sainath/azure | 225 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 225 insertions(+)
+
+Advaith@DESKTOP-3NCKQQC MINGW64 /g/DEVOPS/Git_Repo/batch78/sainath (main)
+$ git stash show -p stash@{1}
+diff --git a/sainath/azure b/sainath/azure
+new file mode 100644
+index 0000000..07a60b0
+--- /dev/null
++++ b/sainath/azure
+@@ -0,0 +1,225 @@
+
